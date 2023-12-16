@@ -6,17 +6,37 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:00:38 by ykhayri           #+#    #+#             */
-/*   Updated: 2023/12/16 11:58:44 by ykhayri          ###   ########.fr       */
+/*   Updated: 2023/12/16 12:44:13 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include <iostream>
+#include <string>
 
 void	drawLine(){
 	for (int i = 0; i < 45; i++)
 		std::cout << "-";
 	std::cout << std::endl;
+}
+
+void	row(std::string id, std::string f_name, std::string l_name, std::string nickname) {
+	int			j;
+	std::string	tmp;
+
+	j = -1;
+	for (int i = 0; i < 4; i++){
+		if (!i)
+			tmp = id;
+		if (i == 1)
+			tmp = f_name;
+		if (i == 2)
+			tmp = l_name;
+		if (i == 3)
+			tmp = nickname;
+		std::cout << '|';
+		while (++j < tmp.length())
+	}
 }
 
 void PhoneBook::add(){
@@ -74,7 +94,7 @@ void PhoneBook::add(){
 
 void PhoneBook::search() {
 	drawLine();
-	
+	row("index", "first name", "last name", "nickname");
 }
 
 int main()
