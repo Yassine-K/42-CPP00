@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:00:38 by ykhayri           #+#    #+#             */
-/*   Updated: 2023/12/16 12:44:13 by ykhayri          ###   ########.fr       */
+/*   Updated: 2023/12/16 12:47:09 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,14 @@ void	row(std::string id, std::string f_name, std::string l_name, std::string nic
 			tmp = l_name;
 		if (i == 3)
 			tmp = nickname;
+		if (tmp.length() > 10) {
+			tmp = tmp.substr(0, 10);
+			tmp[9] = '.';
+ 		}
 		std::cout << '|';
-		while (++j < tmp.length())
+		while (++j < 10 - tmp.length())
+			std::cout << ' ';
+		std::cout << tmp;
 	}
 }
 
