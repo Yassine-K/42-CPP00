@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:00:38 by ykhayri           #+#    #+#             */
-/*   Updated: 2023/12/17 13:09:41 by ykhayri          ###   ########.fr       */
+/*   Updated: 2023/12/17 14:52:13 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,8 +100,6 @@ void PhoneBook::add() {
 		std::cout << elm[i] << std::endl;
 		getline(std::cin, tmp);
 		Contacts[ind].set_att(i + 1, tmp);
-		if (i == 3 &&  Contacts[ind].get_att(phone_number).length() < 10)
-				continue;
 		if (std::cin.eof())
 			exit(0);
 		if (!Contacts[ind].get_att(i + 1).length() && !std::cin.eof())
