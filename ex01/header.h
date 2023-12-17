@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   header.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 18:15:08 by ykhayri           #+#    #+#             */
-/*   Updated: 2023/12/17 12:29:29 by ykhayri          ###   ########.fr       */
+/*   Created: 2023/12/17 12:17:37 by ykhayri           #+#    #+#             */
+/*   Updated: 2023/12/17 12:29:32 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
 
-# include <iostream>
-# include "Contact.hpp"
+#ifndef HEADER_HPP
+# define HEADER_HPP
 
-class PhoneBook {
- 	Contact Contacts[8];
-	public:
-		int		ind;
-	public:
-		void	add();
-		void	search();
-		int		is_valid_id(int id);
+# include "PhoneBook.hpp"
+# include <sstream>
+
+enum e_info{
+	first_name = 1,
+	last_name,
+	nickn,
+	phone_number,
+	darkest_secret
 };
 
 #endif

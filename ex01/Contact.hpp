@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/09 18:15:08 by ykhayri           #+#    #+#             */
-/*   Updated: 2023/12/17 12:29:29 by ykhayri          ###   ########.fr       */
+/*   Created: 2023/12/17 12:28:10 by ykhayri           #+#    #+#             */
+/*   Updated: 2023/12/17 12:28:30 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-# define PHONEBOOK_HPP
+#ifndef Contact_HPP
+# define Contact_HPP
 
 # include <iostream>
-# include "Contact.hpp"
 
-class PhoneBook {
- 	Contact Contacts[8];
+class Contact {
+	std::string firstName;
+	std::string lastName;
+	std::string nickname;
+	std::string phoneNumber;
+	std::string darkestSecret;
 	public:
-		int		ind;
-	public:
-		void	add();
-		void	search();
-		int		is_valid_id(int id);
+		void set_att(int k, std::string val);
+		std::string get_att(int k);
 };
 
 #endif
