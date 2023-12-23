@@ -6,17 +6,11 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/16 10:00:38 by ykhayri           #+#    #+#             */
-/*   Updated: 2023/12/17 14:52:13 by ykhayri          ###   ########.fr       */
+/*   Updated: 2023/12/23 13:51:00 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
-
-void	drawLine() {
-	for (int i = 0; i < 45; i++)
-		std::cout << "-";
-	std::cout << std::endl;
-}
 
 void	row(std::string id, std::string f_name, std::string l_name, std::string nick) {
 	unsigned int	j;
@@ -43,7 +37,7 @@ void	row(std::string id, std::string f_name, std::string l_name, std::string nic
 	}
 	std::cout << '|';
 	std::cout << std::endl;
-	drawLine();
+	std::cout << std::setfill ('-') << std::setw (45) << "" << std::endl;
 }
 
 void	Contact::set_att(int k, std::string val) {
@@ -117,7 +111,7 @@ void PhoneBook::search() {
 	std::string			id;
 
 	i = -1;
-	drawLine();
+	std::cout << std::setfill ('-') << std::setw (45) << "" << std::endl;
 	row("index", "first name", "last name", "nickname");
 	while (++i < 8 && Contacts[i].get_att(first_name).length()) {
 		std::stringstream	to_s;

@@ -6,7 +6,7 @@
 /*   By: ykhayri <ykhayri@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/17 12:17:37 by ykhayri           #+#    #+#             */
-/*   Updated: 2023/12/17 12:29:32 by ykhayri          ###   ########.fr       */
+/*   Updated: 2023/12/23 13:44:00 by ykhayri          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 
 # include "PhoneBook.hpp"
 # include <sstream>
+# include <iomanip>
 
 enum e_info{
 	first_name = 1,
